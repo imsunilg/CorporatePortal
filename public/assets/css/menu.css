@@ -1,0 +1,1863 @@
+@charset "UTF-8";
+/* Slider */
+.slick-loading .slick-list {
+  background: #fff   center center no-repeat;
+}
+
+/* Icons */
+@font-face {
+  font-family: "slick";
+   font-weight: normal;
+  font-style: normal;
+}
+
+/* Arrows */
+
+/* Dots */
+
+
+@-webkit-keyframes fadeup {
+  to {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+@keyframes fadeup {
+  to {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+@-webkit-keyframes mover {
+  0% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+  100% {
+    -webkit-transform: translateY(-10px);
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes mover {
+  0% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+  100% {
+    -webkit-transform: translateY(-10px);
+    transform: translateY(-10px);
+  }
+}
+
+::-webkit-input-placeholder {
+  color: #c1c1c1 !important;
+}
+
+::-moz-placeholder {
+  color: #c1c1c1 !important;
+}
+
+:-ms-input-placeholder {
+  color: #c1c1c1 !important;
+}
+
+:-moz-placeholder {
+  color: #c1c1c1 !important;
+}
+
+
+.maincontainer {
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+/* .mobMenuWrapper {margin-right: 6%;
+  margin-left: 20px;} */
+
+  .mobMenuWrapper {margin-right: 8%;
+    margin-left: 20px;}
+
+.mobMenuWrapper ul.navBar {
+  padding: 0;
+  margin: 0;
+}
+
+.mobMenuWrapper ul.navBar li {
+  display: inline-block;
+  position: relative;
+  vertical-align: top;
+}
+
+.mobMenuWrapper ul.navBar li a {
+  padding: 19px 15px;
+  display: block;
+  color: #fff;
+
+  text-decoration: none;
+  transition: all 0.2s linear;
+  -webkit-transition: all 0.2s linear;
+  -moz-transition: all 0.2s linear;
+
+  font-family: var(--font-Mulish-medium);
+    font-weight: var(--font-weight-500);
+    font-size: var(--fs-16);
+    line-height: var(--lh-20);
+    color: var(--text-primary);
+    
+}
+
+.mobMenuWrapper ul.navBar li a span.subarrow {padding: 3px;
+  border: solid #ec6625;
+  border-width: 0 2px 2px 0;
+  position: absolute;
+  right: 25px;
+  display: inline-block;
+  vertical-align: top;
+  -webkit-transform: rotate(316deg);
+  transform: rotate(316deg);}
+
+.mobMenuWrapper ul.navBar li a span {
+  padding: 3px;
+  border: solid #ec6625;
+  border-width: 0 2px 2px 0;
+  margin-left: 3px;
+  margin-top: 6px;
+  display: inline-block;
+  vertical-align: top;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+
+
+.mobMenuWrapper ul.navBar li ul.innerlinks {
+  width: 250px;
+  padding: 0 0 0;
+  position: absolute;
+  right: 0;
+  background-color: #fff;
+  border: 0;
+  /*border-radius: 1rem;
+  -webkit-border-radius: 0rem;
+  -moz-border-radius: 0rem;*/
+  z-index: 10;
+}
+
+.mobMenuWrapper ul.navBar li ul.innerlinks li {
+  
+  display: block;
+  position: relative;
+}
+
+.mobMenuWrapper ul.navBar li ul.innerlinks li a {
+  padding: 15px 15px 15px 15px !important;
+  color: #282828;
+  text-align: left;
+}
+
+.mobMenuWrapper ul.navBar li ul.innerlinks li a:hover {
+  background-color: #f9f9f9;
+  color: #ec6625;
+  padding-left: 25px !important;
+
+}
+
+
+.mobMenuWrapper ul.navBar li:hover, ul.innerlinks li a:hover {
+  background-color: #f9f9f9;
+  color: #ec6625;
+  
+
+}
+
+
+
+/*.mobMenuWrapper ul.navBar li ul.innerlinks li a:hover img{filter: blur(50%); border:1px solid #FFF;}*/
+
+
+.mobMenuWrapper ul.navBar li ul li a span.subarrow {padding: 3px;
+  border: solid #282828;
+  border-width: 0 2px 2px 0;
+  position: absolute;
+  right: 25px;
+  display: inline-block;
+  vertical-align: top;
+  -webkit-transform: rotate(316deg);
+  transform: rotate(316deg);}
+
+
+
+.mobMenuWrapper ul.navBar li a:hover span.subarrow {padding: 3px;
+  border: solid #ec6625;
+  border-width: 0 2px 2px 0;
+  position: absolute;
+  right: 25px;
+  display: inline-block;
+  vertical-align: top;
+  -webkit-transform: rotate(316deg);
+  transform: rotate(316deg);}
+
+
+
+  .mobMenuWrapper ul.navBar li ul li ul li{ background-color: #f9f9f9; border-radius: 0px !important;}
+
+  
+
+
+.mobMenuWrapper ul.navBar li ul.innerlinks li a::before {
+  display: none !important;
+}
+
+.mobMenuWrapper ul.navBar li ul.innerlinks li:last-child a {
+  border-bottom: 0;
+}
+
+.mobMenuWrapper ul.navBar li.active {
+  background-color: transparent;
+}
+
+
+
+.mobMenuWrapper ul.navBar li.active a::after {
+  content: '';
+  width: 100%;
+  height: 0;
+  border: 3px solid #ec6625;
+  margin: 0 auto;
+  position: absolute;
+  top: 65px;
+  z-index: 99999;
+  left: 0 !important;
+  right: 400;
+
+  background: #ec6625;
+}
+
+.mobMenuWrapper ul.navBar li.active ul li a::after {
+  display: none;
+}
+
+.mobMenuWrapper ul.navBar li:last-child a::after {
+  display: none;
+}
+
+.mobMenuWrapper ul.navBar li #becomeAgent::after {
+  border: none;
+}
+
+.mobMenuWrapper ul.navBar li.noSub a::after {
+  display: none;
+}
+
+.mobMenuWrapper ul.navBar li:hover span {
+  -webkit-transform: rotateZ(225deg);
+  transform: rotateZ(225deg);
+  transition: all 0.3s ease-in;
+  -webkit-transition: all 0.3s ease-in;
+  -moz-transition: all 0.3s ease-in;
+  margin-top: 8px;
+}
+
+.floatform {
+  position: fixed;
+  top: 105px;
+  left: 0;
+  z-index: 1050;
+}
+
+.floatform .innerdiv {
+  position: relative;
+}
+
+.floatform .innerdiv .formBtnDiv {
+  width: 55px;
+
+  /*-webkit-border-radius: 0 7px 7px 0;
+  -moz-border-radius: 0 7px 7px 0;*/
+  background-color: #fff;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.33);
+  -webkit-box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.33);
+  -moz-box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.33);
+}
+
+.floatform .innerdiv .formBtnDiv a {
+  padding: 14px;
+  display: block;
+  text-align: center;
+  transition: all 0.2s ease-in;
+  -webkit-transition: all 0.2s ease-in;
+  -moz-transition: all 0.2s ease-in;
+}
+
+.floatform .innerdiv .formBtnDiv a .cls-1 {
+  fill: #940802;
+}
+
+.floatform .innerdiv .formdiv {
+  width: 400px;
+  padding: 15px;
+  border: 1px solid #F8F6F6;
+  position: absolute;
+  top: 0px;
+  left: -400px;
+  background-color: #F8F6F6;
+  box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
+  -webkit-box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
+  -moz-box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease-in;
+  -webkit-transition: all 0.3s ease-in;
+  -moz-transition: all 0.3s ease-in;
+  border-radius: 20px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+}
+
+.floatform .innerdiv .formdiv h3 {
+  margin: 10px 15px 15px;
+  color: #707070;
+  font: 500 20px "Muli", sans-serif;
+}
+
+.floatform .innerdiv .formdiv h3 .closeForm {
+  position: absolute;
+  right: 20px;
+  top: 15px;
+  font-size: 20px;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.floatform .innerdiv .formdiv .feildDiv {
+  background-color: #FFFFFF;
+  box-shadow: 5px 5px 6px #00000029;
+  -webkit-box-shadow: 5px 5px 6px #00000029;
+  -moz-box-shadow: 5px 5px 6px #00000029;
+  padding: 15px;
+  border-radius: 20px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+}
+
+.floatform .innerdiv .formdiv .feildDiv table {
+  width: 100%;
+}
+
+.floatform .innerdiv .formdiv .feildDiv table tr td {
+  font: 500 15px "Muli", sans-serif;
+  color: #707070;
+}
+
+.floatform .innerdiv .formdiv .feildDiv table tr td a {
+  padding: 0;
+  text-align: left;
+}
+
+.floatform .innerdiv .formdiv .input-field {
+  margin-bottom: 10px;
+}
+
+.floatform .innerdiv .formdiv .input-field label {
+  font: 400 18px "Muli", sans-serif;
+}
+
+.floatform .innerdiv .formdiv .input-field input {
+  font: 400 16px "Muli", sans-serif;
+}
+
+.floatform .innerdiv .formdiv .input-field.focused label {
+  font-size: 15px;
+}
+
+.floatform .innerdiv .formdiv .input-field.numText input {
+  display: inline-block;
+  width: 49%;
+  margin-right: 0px;
+}
+
+.floatform .innerdiv .formdiv .input-field.numText.focused::after {
+  width: auto;
+}
+
+.floatform .innerdiv .formdiv .rating {
+  margin: 15px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: row-reverse;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+          flex-direction: row-reverse;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.floatform .innerdiv .formdiv .rating label {
+  margin-right: 5px;
+  margin-bottom: 0;
+  position: relative;
+  color: #ECE9E9;
+  cursor: pointer;
+  font: 600 22px "Muli", sans-serif;
+}
+
+.floatform .innerdiv .formdiv .rating label::before {
+  content: "\2605";
+  position: absolute;
+  opacity: 0;
+}
+
+.floatform .innerdiv .formdiv .rating label:hover::before,
+.floatform .innerdiv .formdiv .rating label:hover ~ label::before {
+  color: #FFED93;
+  opacity: 1;
+}
+
+.floatform .innerdiv .formdiv .rating input {
+  display: none;
+}
+
+.floatform .innerdiv .formdiv .rating input:checked ~ label::before,
+.floatform .innerdiv .formdiv .rating input:checked ~ label ~ label::before {
+  color: #FFED93;
+  opacity: 1;
+}
+
+.floatform .innerdiv .formdiv button {
+  width: 100%;
+  padding: 8px 15px;
+  border: 0;
+  border-radius: 27px;
+  -webkit-border-radius: 27px;
+  -moz-border-radius: 27px;
+  background-color: #ec6608;
+  color: #fff;
+  font: 600 16px "Muli", sans-serif;
+  transition: all 0.2s ease-in;
+  -webkit-transition: all 0.2s ease-in;
+  -moz-transition: all 0.2s ease-in;
+}
+
+.floatform .innerdiv .formdiv button:active {
+  background-color: #DE5A1A;
+}
+
+.floatform .innerdiv .formdiv.active {
+  left: 65px;
+  opacity: 1;
+  visibility: visible;
+}
+
+.floatform .innerdiv .formdiv#flotform2 {
+  top: 70px;
+  background-color: #ffffff;
+}
+
+.floatform.hide {
+  display: none !important;
+}
+
+.smallHeader {
+  background: #EAEAEA;
+  height: 35px;
+  z-index: 1050;
+}
+
+.smallHeader .call-wrap {
+  display: inline-block;
+  list-style: none;
+  padding: 6px 0;
+  margin: 0;
+}
+
+.smallHeader .call-wrap li {
+  display: inline-block;
+  padding: 0 0 0 25px;
+  color: #282828;
+  text-decoration: none;
+  font: 500 15px "Muli", sans-serif;
+}
+
+.smallHeader .call-wrap li:before {
+  content: "";
+  /* background-image: url(../images/email-black.png); */
+  background-repeat: no-repeat;
+  width: 30px;
+  height: 20px;
+  display: inline-block;
+  position: absolute;
+  left: 15px;
+  top: 10px;
+}
+
+.smallHeader .call-wrap li:hover {
+  color: #EC6608;
+}
+
+.smallHeader .call-wrap li:hover::before {
+  /* background-image: url(../images/email-orange.png); */
+}
+
+.smallHeader .right-top-menu {
+  display: inline-block;
+  margin: 0;
+  padding: 6px 0;
+}
+
+.smallHeader .right-top-menu li {
+  display: inline-block;
+  text-align: right;
+  padding-right: 20px;
+}
+
+.smallHeader .right-top-menu li a {
+  font: 600 15px "Muli", sans-serif;
+  color: #6C6C6C;
+  text-decoration: none;
+}
+
+.smallHeader .right-top-menu li a:after {
+  border: solid #6C6C6C;
+  border-width: 0 2px 2px 0;
+  display: inline-block;
+  padding: 3px;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+  content: "";
+  position: relative;
+  left: 8px;
+  top: -2px;
+}
+
+.smallHeader .right-top-menu li:first-child a::after {
+  display: none;
+}
+
+.smallHeader .right-top-menu li:hover a::after {
+  top: 1px;
+  -webkit-transform: rotate(225deg);
+  transform: rotate(225deg);
+  transition: all 0.3s ease-in;
+  -webkit-transition: all 0.3s ease-in;
+  -moz-transition: all 0.3s ease-in;
+}
+
+.smallHeader .right-top-menu li:hover ul.innerlinks {
+  display: block;
+}
+
+.smallHeader .right-top-menu li ul.innerlinks {
+  width: 250px;
+  padding: 0 0 0;
+  position: absolute;
+  right: 0;
+  background-color: #fff;
+  border: 0;
+  border-radius: 1rem;
+  -webkit-border-radius: 1rem;
+  -moz-border-radius: 1rem;
+  display: none;
+}
+
+.smallHeader .right-top-menu li ul.innerlinks li {
+  display: block;
+  position: relative;
+  text-align: left;
+  padding: 8px 20px;
+}
+
+.smallHeader .right-top-menu li ul.innerlinks li a {
+  color: #282828;
+  text-align: left;
+}
+
+.smallHeader .right-top-menu li ul.innerlinks li a:hover {
+  background-color: transparent;
+  color: #ec6608;
+}
+
+.smallHeader .right-top-menu li ul.innerlinks li a::before {
+  display: none !important;
+}
+
+.smallHeader .right-top-menu li ul.innerlinks li a::after {
+  display: none;
+}
+
+.smallHeader .right-top-menu li ul.innerlinks li:last-child a {
+  border-bottom: 0;
+}
+
+.smallHeader .right-top-menu li ul.innerlinks li ul.menuBox {
+  width: 250px;
+  padding: 0;
+  position: absolute;
+  top: 0;
+  right: 100%;
+  display: none;
+  background-color: #fff;
+  box-shadow: 0 15px 20px -18px rgba(0, 0, 0, 0.72);
+  -webkit-box-shadow: 0 15px 20px -18px rgba(0, 0, 0, 0.72);
+  -moz-box-shadow: 0 15px 20px -18px rgba(0, 0, 0, 0.72);
+  border: 0;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+}
+
+.smallHeader .right-top-menu li ul.innerlinks li ul.menuBox li:last-child a {
+  border-bottom: 0;
+}
+
+.smallHeader .right-top-menu li ul.innerlinks li:hover ul.menuBox {
+  display: block;
+}
+
+header {
+  top: 0px !important;
+}
+
+header .menu_btn {
+  padding: 20px 40px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  display: none;
+}
+
+header h1 {
+  margin: 0;
+  display: inline-block;
+  vertical-align: top;
+}
+
+header h1 a {
+  width: 187px;
+  height: 35px;
+  margin: 17.5px 0;
+  display: inline-block;
+  /* background: url(../images/logo.png) no-repeat center center/contain; */
+  text-indent: -9999px;
+  vertical-align: top;
+}
+
+header .openform img {
+  margin: 7px 0;
+}
+
+.mobHeader {
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(-18%, #ef7d00), color-stop(127%, #ad2221));
+  background-image: linear-gradient(to bottom, #ef7d00 -18%, #ad2221 127%);
+  margin-bottom: 15px;
+}
+
+.mobHeader h3 {
+  font: 400 22px "Muli", sans-serif;
+  color: #fff;
+  margin: 0;
+  padding: 10px 0;
+}
+
+.mobHeader h3 a {
+  margin-right: 15px;
+}
+
+.mobHeader h3 a img {
+  vertical-align: middle;
+}
+
+
+
+
+
+
+.row {
+  margin-right: -7px;
+  margin-left: -7px;
+}
+
+@media (max-width: 994px) and (min-width: 768px) {
+  .maincontainer {
+    max-width: 980px;
+    padding-right: 0;
+    padding-left: 0;
+  }
+  .carousel-inner {
+    width: 85% !important;
+    margin-left: 13% !important;
+  }
+  .carousel-indicators {
+    bottom: 90px !important;
+    width: 85% !important;
+    margin-left: 22% !important;
+  }
+  .bannerSec label {
+    font: 400 13px "Muli", sans-serif !important;
+  }
+  .bannerSec input,
+  .bannerSec select {
+    font: 300 15px "Muli", sans-serif !important;
+  }
+}
+
+@media (min-width: 1200px) {
+  .maincontainer {
+    max-width: 1150px;
+  }
+  .mobMenuWrapper ul.navBar li {
+    transition: all 0.3s ease-in;
+    -webkit-transition: all 0.3s ease-in;
+    -moz-transition: all 0.3s ease-in;
+  }
+  .mobMenuWrapper ul.navBar li a {
+    padding: 26px 6px;
+  }
+  .mobMenuWrapper ul.navBar li ul.innerlinks {
+    box-shadow: 0 15px 20px -18px rgba(0, 0, 0, 0.72);
+    -webkit-box-shadow: 0 15px 20px -18px rgba(0, 0, 0, 0.72);
+    -moz-box-shadow: 0 15px 20px -18px rgba(0, 0, 0, 0.72);
+    opacity: 0;
+    visibility: hidden;
+    -webkit-transform: translateY(25px);
+    transform: translateY(25px);
+  }
+  .mobMenuWrapper ul.navBar li ul.innerlinks.active {
+    -webkit-animation: fadeup 0.2s linear forwards;
+            animation: fadeup 0.2s linear forwards;
+    background-repeat: no-repeat;
+    /* background-image: url(../images/Rectangle.png); */
+    background-position: unset;
+  }
+  .mobMenuWrapper ul.navBar li ul.innerlinks li ul.menuBox {
+    width: 350px;
+    padding: 0;
+    position: absolute;
+    top: 0;
+    left: 94%;
+    display: none;
+    background-color: #fff;
+    box-shadow: 0 15px 20px -18px rgba(0, 0, 0, 0.72);
+    -webkit-box-shadow: 0 15px 20px -18px rgba(0, 0, 0, 0.72);
+    -moz-box-shadow: 0 15px 20px -18px rgba(0, 0, 0, 0.72);
+    border: 0;
+    /*border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;*/
+    background-repeat: no-repeat;
+    /* background-image: url(../images/Rectangle.png); */
+    background-position: unset;
+  }
+
+  .mobMenuWrapper ul.navBar li ul.innerlinks li ul.menuBox li {border-bottom: 1px solid #cacaca;}
+
+
+  .mobMenuWrapper ul.navBar li ul.innerlinks li ul.menuBox li:last-child a {
+    border-bottom: 0;
+  }
+  .mobMenuWrapper ul.navBar li ul.innerlinks li:hover ul.menuBox {
+    display: block;
+  }
+  .mobMenuWrapper ul.navBar li ul.innerlinks li.feedback, .mobMenuWrapper ul.navBar li ul.innerlinks li.renewal, .mobMenuWrapper ul.navBar li ul.innerlinks li.support {
+    display: block !important;
+  }
+  .mobMenuWrapper ul.navBar li ul.innerlinks li.feedback:hover ul.menuBox, .mobMenuWrapper ul.navBar li ul.innerlinks li.renewal:hover ul.menuBox, .mobMenuWrapper ul.navBar li ul.innerlinks li.support:hover ul.menuBox {
+    display: block;
+  }
+}
+
+@media (max-width: 1200px) {
+  body {
+    padding-top: 70px;
+  }
+  .smallHeader {
+    display: none;
+  }
+  header {
+    top: 0 !important;
+  }
+  .formBtnDiv {
+    display: none;
+  }
+  .floatform {
+    position: relative;
+    top: 25px;
+    z-index: 1030;
+    padding: 0 15px;
+  }
+  .floatform .innerdiv .formdiv {
+    width: 50%;
+    padding: 10px 10px;
+  }
+  .floatform .innerdiv .formdiv h3 {
+    font: 500 18px "Muli", sans-serif;
+    margin: 10px 10px 8px;
+  }
+  .floatform .innerdiv .formdiv.active {
+    left: 25%;
+  }
+  .floatform .innerdiv .formdiv .feildDiv {
+    padding: 10px;
+  }
+  .floatform .innerdiv .formdiv .feildDiv table tr td {
+    font: 500 15px "Muli", sans-serif;
+  }
+  .floatform .innerdiv .formdiv .input-field {
+    margin-bottom: 10px;
+  }
+  .floatform .innerdiv .formdiv .input-field label {
+    font: 400 17px "Muli", sans-serif;
+  }
+  .floatform .innerdiv .formdiv .input-field input {
+    font: 400 15px "Muli", sans-serif;
+  }
+  .floatform .innerdiv .formdiv .input-field.focused label {
+    font: 400 14px "Muli", sans-serif;
+  }
+  .floatform .innerdiv .formdiv .input-field.numText input {
+    display: inline-block;
+    width: 49%;
+    margin-right: 0px;
+  }
+  .floatform .innerdiv .formdiv .input-field.numText.focused::after {
+    width: auto;
+  }
+  .floatform .innerdiv .formdiv#flotform2 {
+    top: 10px;
+  }
+}
+
+@media (min-width: 1360px) {
+  .maincontainer {
+    max-width: 1330px;
+  }
+}
+
+@media (max-width: 1359px) and (min-width: 1200px) {
+  .mobMenuWrapper ul.navBar li a {
+    padding: 26px 15px;
+  }
+  .menuDiv {
+    text-align: right;
+  }
+  .smallHeader .call-wrap {
+    padding: 6px 0 0 25px;
+  }
+
+}
+
+@media (max-width: 1199px) {
+  .mobMenuWrapper {
+    width: 100%;
+    height: 100%;
+    padding-bottom: 70px;
+    position: fixed;
+    top: 70px;
+    left: -101%;
+    z-index: 999;
+    background-color: #f2f5f8;
+    overflow-y: auto;
+    text-align: left;
+    transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+  }
+  .mobMenuWrapper ul.navBar li {
+    display: block;
+  }
+  .mobMenuWrapper ul.navBar li a {
+    padding: 15px 30px;
+    border-bottom: 1px solid #fff;
+    color: #003d59;
+    font: 600 18px "Muli", sans-serif;
+  }
+  .mobMenuWrapper ul.navBar li a span {
+    margin-top: 6px;
+    border: solid #003d59;
+    border-width: 0 1.5px 1.5px 0;
+    float: right;
+    transition: all 0.2s ease-in;
+    -webkit-transition: all 0.2s ease-in;
+    -moz-transition: all 0.2s ease-in;
+  }
+  .mobMenuWrapper ul.navBar li a.accordActive span {
+    margin-top: 10px;
+    -webkit-transform: rotate(-135deg);
+    transform: rotate(-135deg);
+  }
+  .mobMenuWrapper ul.navBar li ul.innerlinks {
+    width: 100%;
+    padding: 0;
+    border-bottom: 0;
+    display: none;
+    position: static;
+    border-radius: 0;
+  }
+  .mobMenuWrapper ul.navBar li ul.innerlinks li a {
+    padding: 15px 30px;
+    color: #7b7b7b;
+    font: 400 17px "Muli", sans-serif;
+  }
+  .mobMenuWrapper ul.navBar li ul.innerlinks li a:hover {
+    background-color: transparent;
+    color: #ec6608;
+    padding-left: 30px;
+  }
+  .mobMenuWrapper ul.navBar li ul.innerlinks li ul.menuBox {
+    padding: 0;
+    display: none;
+    background-color: #f3f3f3;
+  }
+  .mobMenuWrapper.visible {
+    left: 0;
+  }
+  header {
+    text-align: center;
+  }
+  header .menu_btn {
+    display: block;
+  }
+  .plansSec .choosePlan .sumInsdiv {
+    background-color: transparent;
+    padding: 10px 0px 0px;
+    color: #fff;
+  }
+  .plansSec .choosePlan .sumInsdiv .closebtn {
+    position: absolute;
+    top: 0;
+    right: 15px;
+    font: 300 25px "Muli", sans-serif;
+    margin-left: 50px;
+    color: #000000;
+    z-index: 1130;
+    display: block;
+  }
+  .plansSec .choosePlan .sumInsdiv .closebtn:hover {
+    color: #000000;
+  }
+  .plansSec .choosePlan .sumInsdiv .slideDiv fieldset .btnPro .nextBtn {
+    padding: 11px 14px;
+    font: 600 14px "Muli", sans-serif;
+  }
+  .plansSec .choosePlan .sumInsdiv .slideDiv fieldset .card .card-body table.tablePremium tr td h3.totalPre {
+    font: 800 25px "Muli", sans-serif;
+  }
+  .plansSec .choosePlan .sumInsdiv .slideDiv fieldset .card .card-body table.tablePremium tr td small {
+    color: #282828;
+  }
+  .plansSec .choosePlan .knowMore img {
+    -webkit-filter: grayscale(1) invert(1);
+            filter: grayscale(1) invert(1);
+  }
+  .plansSec .choosePlan .knowMore .tooltiptext {
+    width: 200px;
+    padding: 4px 4px;
+    position: absolute;
+    top: 100%;
+    left: -50px;
+  }
+  .plansSec .choosePlan #showOnChk .knowMore .tooltiptext {
+    left: -60px;
+    width: 120px;
+  }
+  .plansSec .choosePlan .sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 9999;
+    top: 0;
+    left: 0;
+    background-color: #f7f6f6;
+    overflow-x: hidden;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    padding-top: 30px;
+  }
+  .plansSec .choosePlan .sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 15px;
+    font: 300 25px "Muli", sans-serif;
+    margin-left: 50px;
+    color: #000000;
+  }
+  .plansSec .choosePlan .sidenav .closebtn:hover {
+    color: #000000;
+  }
+  .otpModal1 .btnPro .nextBtn {
+    min-width: 100px;
+    padding: 13px 20px;
+    font: 600 13px "Muli", sans-serif;
+  }
+}
+
+
+
+@media (max-width: 767px) {
+  .floatform {
+    position: relative;
+    top: 25px;
+    z-index: 1030;
+    padding: 0 15px;
+  }
+  .floatform .innerdiv .formdiv {
+    width: 100%;
+    padding: 10px 10px;
+  }
+  .floatform .innerdiv .formdiv h3 {
+    font: 500 16px "Muli", sans-serif;
+    margin: 5px 10px 5px;
+  }
+  .floatform .innerdiv .formdiv.active {
+    left: 0;
+  }
+  .floatform .innerdiv .formdiv .feildDiv {
+    padding: 10px;
+  }
+  .floatform .innerdiv .formdiv .feildDiv table tr td {
+    font: 500 12px "Muli", sans-serif;
+  }
+  .floatform .innerdiv .formdiv .input-field {
+    margin-bottom: 8px;
+  }
+  .floatform .innerdiv .formdiv .input-field label {
+    font: 400 16px "Muli", sans-serif;
+  }
+  .floatform .innerdiv .formdiv .input-field input {
+    font: 400 14px "Muli", sans-serif;
+  }
+  .floatform .innerdiv .formdiv .input-field.focused label {
+    font-size: 13px;
+  }
+  .floatform .innerdiv .formdiv .input-field.numText input {
+    display: inline-block;
+    width: 49%;
+    margin-right: 0px;
+  }
+  .floatform .innerdiv .formdiv .input-field.numText.focused::after {
+    width: auto;
+  }
+  .floatform .innerdiv .formdiv#flotform2 {
+    top: -2px;
+  }
+  .bannerSec .spacePad {
+    padding: 20px 0 80px;
+  }
+  .bannerSec .spacePad .formdiv .radio_sub.maxClaims .bt-radio {
+    padding: 4px 5px;
+  }
+  .bannerSec .spacePad .formdiv .radio_sub .bt-radio {
+    font: 300 16px/20px "Muli", sans-serif;
+  }
+  .bannerSec .spacePad .formdiv .hiddenInfo {
+    margin-top: 10px;
+  }
+  .bannerSec .spacePad .bg-img {
+    background: none;
+    margin-bottom: 40px;
+    margin-top: 0;
+  }
+  .bannerSec .spacePad .bg-img #bgSlider.carousel .carousel-inner {
+    width: 100% !important;
+    margin-left: 0% !important;
+  }
+  .bannerSec .spacePad .bg-img #bgSlider.carousel .carousel-inner .maincontainer {
+    padding: 0;
+  }
+  .bannerSec .spacePad .bg-img #bgSlider.carousel .carousel-inner .bgslide h2 {
+    font: 500 28px "Muli", sans-serif !important;
+  }
+  .bannerSec .spacePad .bg-img #bgSlider.carousel .carousel-inner .bgslide p {
+    margin: 0px 0 20px 0px !important;
+    font: 200 14px/25px "Muli", sans-serif !important;
+  }
+  .bannerSec .spacePad .bg-img #bgSlider.carousel .carousel-inner .bgslide h5 {
+    font: 300 15px "Muli", sans-serif !important;
+  }
+  .bannerSec .spacePad .bg-img #bgSlider.carousel .carousel-inner .bgslide table {
+    background-color: #00305a;
+  }
+  .bannerSec .spacePad .bg-img #bgSlider.carousel .carousel-inner .bgslide table tr td {
+    width: 95%;
+  }
+  .bannerSec .spacePad .bg-img #bgSlider.carousel .carousel-inner .bgslide table tr td:first-child {
+    width: 5%;
+  }
+  .bannerSec .spacePad .bg-img .carousel-indicators {
+    bottom: 13% !important;
+    width: 100% !important;
+    margin-left: 0% !important;
+    -webkit-box-pack: end !important;
+        -ms-flex-pack: end !important;
+            justify-content: end !important;
+    padding-right: 10px !important;
+  }
+  .bannerSec .spacePad .bg-img .carousel-indicators li {
+    width: 6px !important;
+    height: 6px !important;
+  }
+  .bannerSec .spacePad .bg-img .carousel-indicators li.active {
+    width: 12px !important;
+  }
+  .bannerSec .spacePad .bg-img .carousel-indicators li.active::before {
+    content: '';
+    width: 12px !important;
+    height: 6px !important;
+  }
+  .bannerSec .spacePad .bg-img .carousel-indicators.maincontainer {
+    padding: 0 0 0 15px;
+  }
+  .bannerSec .spacePad .cstmbtn {
+    width: 100%;
+  }
+  .bannerSec .spacePad .cstanch {
+    width: 100%;
+    border: 1px solid;
+    border-radius: 27px;
+    -webkit-border-radius: 27px;
+    -moz-border-radius: 27px;
+    padding: 15px 25px;
+  }
+  .empDetailSec {
+    padding: 0px 15px 50px;
+  }
+  .detailsSec {
+    padding: 0px 15px 50px;
+  }
+  .labelBlock {
+    display: block !important;
+  }
+  .plansSec .choosePlan .knowMore .tooltiptext {
+    width: 180px;
+    padding: 4px 4px;
+    position: absolute;
+    top: 100%;
+    left: -90px;
+  }
+  .plansSec .choosePlan #showOnChk .knowMore .tooltiptext {
+    left: -90px;
+  }
+  .plansSec .choosePlan .sumInsdiv .slideDiv fieldset .card .card-header {
+    padding: 15px 10px;
+  }
+  .plansSec .choosePlan .sumInsdiv .slideDiv fieldset .card .card-header h5.planA {
+    color: #272F2F;
+    font: 700 20px "Muli", sans-serif;
+  }
+  .plansSec .choosePlan .sumInsdiv .slideDiv fieldset .card .card-header small.planTxt {
+    color: #272F2F;
+  }
+  .plansSec .choosePlan .sumInsdiv .slideDiv fieldset .card .card-header .sumInsured1 small {
+    color: #272F2F;
+  }
+  .plansSec .choosePlan .sumInsdiv .slideDiv fieldset .card .card-header .sumInsured1 h6.sumInsured {
+    color: #272F2F;
+  }
+  .plansSec .choosePlan .sumInsdiv .slideDiv fieldset .card .card-header .sumInsured2 {
+    color: #272F2F;
+  }
+  .plansSec .choosePlan .sumInsdiv .slideDiv fieldset .card .card-header h3.totalPre {
+    color: #282828;
+  }
+  .plansSec .choosePlan .sumInsdiv .slideDiv fieldset .card .card-header .viewBtn.collapsed {
+    margin-top: 20px;
+  }
+  .plansSec .choosePlan .sumInsdiv .slideDiv fieldset .card .card-body table.tablePremium {
+    width: 100%;
+  }
+  .plansSec .choosePlan .sumInsdiv .slideDiv fieldset .card .card-body table.tablePremium tbody tr td small {
+    color: #282828;
+  }
+  .plansSec .choosePlan .sumInsdiv .slideDiv fieldset .card .card-body table.tablePremium tbody tr td h3.totalPre {
+    font: 800 23px "Muli", sans-serif;
+  }
+  .plansSec .choosePlan .sumInsdiv .slideDiv fieldset .card .card-body table.tableList tr td .knowMore .tooltiptext {
+    width: 180px;
+    padding: 4px 4px;
+    position: absolute;
+    top: 100%;
+    left: -125px;
+  }
+  .plansSec .choosePlan .sumInsdiv .slideDiv fieldset .btnPro {
+    margin: 0px 0 15px 60px;
+  }
+  .plansSec .choosePlan .sumInsdiv .slideDiv fieldset .btnPro .nextBtn {
+    padding: 12px 25px;
+    font: 600 13px "Muli", sans-serif;
+  }
+  .smeSec.coverSec .addonBtn {
+    width: 70%;
+  }
+  .otpModal1 .modal-body {
+    padding: 10px 10px;
+  }
+  .otpModal1 .planDesc h4 {
+    margin-top: 10px;
+    font: 800 14px "Muli", sans-serif;
+  }
+  .otpModal1 .planDesc ul li .checkDiv table tr td label {
+    font: 600 14px "Muli", sans-serif;
+  }
+  .otpModal1 .planDesc ul li .checkDiv table tr td .buildTxt {
+    font: 500 12px "Muli", sans-serif;
+  }
+  .otpModal1 .planDesc ul li .checkDiv table tr td .ratingTxt {
+    font: 500 11px "Muli", sans-serif;
+  }
+  .otpModal1 .planDesc .headerSec li h4 {
+    display: none;
+  }
+  .otpModal1 .planDesc .headerSec li p.addCont {
+    display: none;
+  }
+}
+
+@media (max-width: 719px) {
+  header .menu_btn {
+    padding: 20px 15px;
+  }
+  .mobHeader h3 {
+    font: 400 20px "Muli", sans-serif;
+  }
+  footer {
+    padding: 35px 15px;
+  }
+  footer p {
+    font: 300 15px/25px "Muli", sans-serif;
+  }
+  footer p strong {
+    font-size: 18px;
+  }
+  footer p small {
+    font: 300 13px/25px "Muli", sans-serif;
+  }
+  footer ul {
+    margin: 25px 0 10px;
+  }
+}
+
+@media (max-width: 600px) {
+  .mobHeader h3 {
+    font: 400 16px "Muli", sans-serif;
+  }
+  .prdsServices {
+    padding: 40px 15px;
+  }
+  .prdsServices h5 {
+    font: 600 14px "Muli", sans-serif;
+  }
+  .prdsServices ul li a {
+    font: 400 12px "Muli", sans-serif;
+  }
+  .bannerSec .spacePad {
+    padding: 20px 0 50px;
+  }
+  .bannerSec .spacePad .bg-img {
+    background: none;
+  }
+  .whyGhealthSec {
+    padding: 50px 15px 0px;
+  }
+  .whyGhealthSec h3 {
+    margin: 0 0 5px;
+    font: 300 30px "Muli", sans-serif;
+    text-align: left;
+  }
+  .whyGhealthSec p {
+    margin: 57px 0 20px;
+    font: 900 15px/25px "Muli", sans-serif;
+    text-align: left;
+  }
+  .ghiInfo h3 {
+    margin: 0px 0 20px;
+    font: 300 30px "Muli", sans-serif;
+  }
+  .advantageGh h3 {
+    margin: 0px 0 25px;
+    font: 300 30px "Muli", sans-serif;
+  }
+  .claimSettleSec h3 {
+    margin: 0 0 5px;
+    font: 300 30px "Muli", sans-serif;
+    text-align: left;
+  }
+  .claimSettleSec p {
+    margin: 0 0 55px;
+    font: 400 17px/25px "Muli", sans-serif;
+    text-align: left;
+  }
+  .claimSettleSec a {
+    color: #f26624;
+    font: 400 20px "Muli", sans-serif;
+    text-decoration: underline;
+  }
+  .claimSettleSec .borderedDiv {
+    margin-bottom: 30px;
+    padding: 5px;
+    min-height: 180px;
+  }
+  .claimSettleSec .borderedDiv h1 {
+    font: italic 400 56px/70px "Muli", sans-serif;
+  }
+  .claimSettleSec .borderedDiv p {
+    margin: 0;
+    font: 400 14px/25px "Muli", sans-serif;
+    text-align: left;
+  }
+  .detailsSec .choosePlan h2 {
+    margin: 10px 0 12px;
+    font: 200 20px "Muli", sans-serif;
+  }
+  .detailsSec .choosePlan .sumInsdiv .slideDiv fieldset .card .card-header a {
+    font: 600 16px "Muli", sans-serif;
+    padding: 15px 15px;
+  }
+  .detailsSec .choosePlan .sumInsdiv .slideDiv fieldset .card .card-header a.card-link.collapsed {
+    /* background: #004a80 url(../images/bottom-arrow.png) no-repeat 95% center/16px; */
+  }
+  .detailsSec .choosePlan .sumInsdiv .slideDiv fieldset .card .card-body {
+    padding: 0 20px 20px;
+  }
+  .detailsSec .choosePlan .sumInsdiv .slideDiv fieldset .card .card-body table.upload tr td p {
+    font: 600 14px "Muli", sans-serif;
+  }
+  .detailsSec .choosePlan .sumInsdiv .slideDiv fieldset .card .card-body table.upload tr td span {
+    font: 300 11px "Muli", sans-serif;
+  }
+  .detailsSec .choosePlan .sumInsdiv .slideDiv fieldset .card .card-body table.upload tr td .downloadFileBtn {
+    font: 400 10px "Muli", sans-serif;
+    padding-right: 0px;
+    width: 300px;
+  }
+  .detailsSec .submitdiv {
+    text-align: justify;
+  }
+  .detailsSec .submitdiv ul li {
+    width: 49.3%;
+  }
+  .detailsSec .submitdiv ul li:first-child {
+    display: inline-block;
+    text-align: left;
+  }
+  .plansSec .choosePlan h2 {
+    font: 200 20px "Muli", sans-serif;
+    margin-top: 10px;
+    text-align: center;
+  }
+  .plansSec .choosePlan .sumInsdiv {
+    background-color: transparent;
+    padding: 10px 0px 0px;
+    color: #fff;
+  }
+  .plansSec .choosePlan .sumInsdiv .slideDiv fieldset .card .card-body table.tableList tr td .knowMore .tooltiptext {
+    width: 190px;
+    padding: 4px 4px;
+    position: absolute;
+    top: 100%;
+    left: -125px;
+  }
+  .plansSec .choosePlan .sumInsdiv .closebtn {
+    position: absolute;
+    top: 0;
+    right: 15px;
+    font: 300 25px "Muli", sans-serif;
+    margin-left: 50px;
+    color: #000000;
+    z-index: 1130;
+    display: block;
+  }
+  .plansSec .choosePlan .sumInsdiv .closebtn:hover {
+    color: #000000;
+  }
+  .plansSec .choosePlan .knowMore img {
+    -webkit-filter: grayscale(1) invert(1);
+            filter: grayscale(1) invert(1);
+  }
+  .plansSec .choosePlan .knowMore .tooltiptext {
+    width: 200px;
+    padding: 4px 4px;
+    position: absolute;
+    top: 100%;
+    left: -50px;
+  }
+  .plansSec .choosePlan #showOnChk .knowMore .tooltiptext {
+    left: -60px;
+    width: 120px;
+  }
+  .plansSec .choosePlan .sumInsRadio {
+    padding: 0;
+    margin: 0 0px !important;
+  }
+  .plansSec .choosePlan .sumInsRadio li input {
+    display: none;
+  }
+  .plansSec .choosePlan .sumInsRadio li input:checked + label table {
+    width: 100%;
+    background: -webkit-gradient(linear, right top, left top, from(#b12b30), to(#f26624));
+    background: linear-gradient(270deg, #b12b30 0%, #f26624 100%);
+    color: #fff;
+  }
+  .plansSec .choosePlan .sumInsRadio li input:checked + label table tr:first-child td:first-child {
+    font: 600 20px "Muli", sans-serif;
+  }
+  .plansSec .choosePlan .sumInsRadio li input:checked + label table tr:first-child td.imgTd .rightImg {
+    display: none !important;
+  }
+  .plansSec .choosePlan .sumInsRadio li input:checked + label table tr:first-child td:last-child {
+    display: block !important;
+    width: 100%;
+    text-align: left;
+  }
+  .plansSec .choosePlan .sumInsRadio li input:checked + label table tr:first-child td:last-child .coverTd {
+    font: 300 10px "Muli", sans-serif;
+    position: relative;
+    top: 30px;
+    border-left: 1px solid;
+    padding: 0 20px 0 5px;
+    margin: 0 10px 0 auto;
+    width: 90px;
+  }
+  .plansSec .choosePlan .sumInsRadio li input:checked + label table tr:first-child td:last-child .coverTd .coverBtn {
+    color: #ffffff;
+    border: none;
+    padding: 0;
+    text-align: left;
+    background: transparent;
+    pointer-events: all;
+  }
+  .plansSec .choosePlan .sumInsRadio li input:checked + label .footerTable {
+    position: relative;
+    bottom: 0;
+  }
+  .plansSec .choosePlan .sumInsRadio li input:checked + label .footerTable tr:first-child td:last-child {
+    display: none !important;
+  }
+  .plansSec .choosePlan .sumInsRadio li input:checked + label .addon .addonBtn {
+    background: #e55a26;
+  }
+  .plansSec .choosePlan .sumInsRadio li label {
+    height: auto;
+    color: #282828;
+    border: none;
+  }
+  .plansSec .choosePlan .sumInsRadio li label table {
+    width: 100%;
+    background: #eaeaea;
+  }
+  .plansSec .choosePlan .sumInsRadio li label table tr:first-child td:first-child {
+    font: 600 17px "Muli", sans-serif;
+  }
+  .plansSec .choosePlan .sumInsRadio li label table tr:first-child td.imgTd .rightImg {
+    display: none !important;
+  }
+  .plansSec .choosePlan .sumInsRadio li label table tr:first-child td:last-child {
+    display: block !important;
+    width: 100%;
+    text-align: left;
+  }
+  .plansSec .choosePlan .sumInsRadio li label table tr:first-child td:last-child .coverTd {
+    font: 300 10px "Muli", sans-serif;
+    position: relative;
+    top: 30px;
+    border-left: 1px solid;
+    padding: 0 20px 0 5px;
+    /* background: url(../images/plangrey.png) no-repeat right 50%/8px; */
+    margin: 0 10px 0 auto;
+    width: 90px;
+  }
+  .plansSec .choosePlan .sumInsRadio li label table tr:first-child td:last-child .coverTd .coverBtn {
+    color: #282828;
+    border: none;
+    padding: 0;
+    text-align: left;
+    background: transparent;
+    pointer-events: none;
+  }
+  .plansSec .choosePlan .sumInsRadio li label table tr.smallTxt {
+    font: 400 12px "Muli", sans-serif;
+  }
+  .plansSec .choosePlan .sumInsRadio li label table tr.smallTxt td {
+    padding: 0 10px;
+    text-align: left !important;
+  }
+  .plansSec .choosePlan .sumInsRadio li label table tr.priceTxt {
+    font: 400 14px "Muli", sans-serif;
+  }
+  .plansSec .choosePlan .sumInsRadio li label table tr.priceTxt td:last-child {
+    font: 800 15px "Muli", sans-serif;
+    text-align: left !important;
+  }
+  .plansSec .choosePlan .sumInsRadio li label table tr td {
+    padding: 10px;
+  }
+  .plansSec .choosePlan .sumInsRadio li label .footerTable {
+    position: relative;
+    bottom: 0;
+  }
+  .plansSec .choosePlan .sumInsRadio li label .footerTable tr:first-child td:last-child {
+    display: none !important;
+  }
+  .plansSec .choosePlan .sumInsRadio li .coverlist {
+    padding: 10px 10px 0;
+  }
+  .plansSec .choosePlan .sumInsRadio li .coverlist h4 {
+    font: 600 13px "Muli", sans-serif;
+  }
+  .plansSec .choosePlan .sumInsRadio li .coverlist p {
+    font: 300 12px "Muli", sans-serif;
+  }
+  .plansSec .choosePlan .sumInsRadio li .addon {
+    padding: 0px 10px 10px;
+    position: static;
+    bottom: 0px;
+  }
+  .plansSec .choosePlan .sumInsRadio li .addon .addonBtn {
+    font: 500 13px "Muli", sans-serif;
+    padding: 5px 15px;
+  }
+  .plansSec .choosePlan .sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 9999;
+    top: 0;
+    left: 0;
+    background-color: #f7f6f6;
+    overflow-x: hidden;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    padding-top: 30px;
+  }
+  .plansSec .choosePlan .sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 15px;
+    font: 300 25px "Muli", sans-serif;
+    margin-left: 50px;
+    color: #000000;
+  }
+  .plansSec .choosePlan .sidenav .closebtn:hover {
+    color: #000000;
+  }
+  .plansSec .polDetails {
+    margin-top: 30px;
+  }
+  .plansSec .polDetails thead tr th {
+    font: 300 18px "Muli", sans-serif;
+  }
+  .plansSec .polDetails tbody tr td {
+    font: 300 13px "Muli", sans-serif;
+  }
+  .plansSec .polDetails tfoot tr td {
+    font: 300 14px "Muli", sans-serif;
+  }
+  .sidenav h1 {
+    font: 300 20px "Muli", sans-serif;
+    margin-top: 0;
+    margin-bottom: 10px;
+  }
+  .sidenav .radioDiv ul li label {
+    font: 300 13px "Muli", sans-serif;
+  }
+  .sideDiv {
+    margin-top: 20px;
+  }
+  .sideDiv .appSec {
+    border: 0;
+    background-color: transparent;
+    border-radius: 0;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    padding: 0 0 0 0;
+  }
+  .sideDiv .appSec h1 {
+    font: 200 25px "Muli", sans-serif;
+  }
+  .sideDiv .appSec h2 {
+    font: 200 20px "Muli", sans-serif;
+  }
+  .sideDiv .appSec .products {
+    padding: 10px;
+  }
+  .sideDiv .appSec .cstmbtn {
+    display: none;
+  }
+  .paymentRecieved .paymentRec h1 img {
+    width: 30px;
+  }
+  .paymentRecieved .paymentRec p {
+    margin-bottom: 20px;
+  }
+  .paymentRecieved .paymentRec ul {
+    padding: 0;
+  }
+  .paymentRecieved .paymentRec ul.downloadPolicy {
+    margin-bottom: 15px;
+  }
+  .paymentRecieved .paymentRec ul.downloadPolicy li:first-child {
+    margin-right: 10px;
+  }
+  .paymentRecieved .paymentRec ul.sendPolicy {
+    margin-bottom: 20px;
+  }
+  .paymentRecieved .payRecFoot h3 {
+    font: 200 25px "Muli", sans-serif;
+  }
+  .paymentRecieved .payRecFoot .paymentRec .cstmbtn {
+    width: 100%;
+  }
+  .summary .choosePayMethod h2 {
+    font: 200 20px "Muli", sans-serif;
+  }
+  .summary .choosePayMethod .paymentmode ul li a div {
+    width: 90px;
+    height: 90px;
+  }
+  .smeSec h2 {
+    font-size: 22px;
+  }
+  .smeSec ul.nav-pills li a span {
+    font-size: 11px;
+  }
+  .smeSec ul.nav-tabs {
+    margin-top: 75px;
+  }
+  .smeSec .tab-content .formdiv {
+    padding: 15px 0;
+  }
+  .smeSec.coverSec ul.nav-pills {
+    margin-top: 30px;
+  }
+  .smeSec.coverSec ul.nav-pills li a {
+    padding: 10px 15px;
+    font-size: 12px;
+  }
+  .smeSec.coverSec .tab-content {
+    padding: 20px 15px;
+  }
+  .smeSec.coverSec .tab-content table tr td {
+    font: 400 13px/19px "Muli", sans-serif;
+  }
+  .smeSec.coverSec .qQuote {
+    padding: 40px 25px;
+  }
+  .smeSec.coverSec .qQuote .radioDiv {
+    text-align: center;
+  }
+  .smeSec.coverSec .qQuote h3 {
+    float: none;
+  }
+  .smeSec.coverSec .qQuote .fnbtable tr td {
+    font-size: 14px;
+  }
+  .smeSec.coverSec .qQuote .fnbtable tr td input {
+    font-size: 14px;
+  }
+  .smeSec.coverSec .qQuote .fnbtable tr td:last-child {
+    min-width: initial;
+  }
+  .retrieTable table {
+    min-width: 650px;
+  }
+  .retrieTable table tr td {
+    font-size: 15px;
+  }
+  .retrieTable table tr th {
+    font-size: 13px;
+  }
+  .retrieTable .cstmbtn {
+    width: 80%;
+  }
+  .marine-table .piInfo h3 {
+    margin: 0 0 25px;
+    font: 300 30px "Muli", sans-serif;
+    text-align: left;
+  }
+  .marine-table .piInfo p {
+    text-align: left;
+    font: 400 17px "Muli", sans-serif;
+    margin: 0 0 10px;
+  }
+  .marine-table .piInfo td:nth-child(1) {
+    font: 300 14px "Muli", sans-serif;
+  }
+  .submitdiv {
+    background: #00305b;
+    text-align: center;
+    padding: 10px;
+  }
+  .submitdiv.detailsSubmitDiv {
+    background: #ffffff;
+  }
+  .submitdiv ul li {
+    padding: 0 10px;
+    vertical-align: middle;
+    width: 100%;
+  }
+  .submitdiv ul li:first-child {
+    display: none;
+  }
+  .submitdiv ul li #btnSubmit {
+    width: 100%;
+  }
+  .otpModal#customisePopup .modal-header h4 {
+    font: 500 17px "Muli", sans-serif;
+  }
+  .otpModal#customisePopup .borderDiv p {
+    font: 600 12px "Muli", sans-serif;
+  }
+  .otpModal .modal-body {
+    padding: 0 15px;
+  }
+  .otpModal .planDesc h4 {
+    font: 800 15px "Muli", sans-serif;
+  }
+  .otpModal .planDesc .footerSec {
+    border-bottom: none;
+  }
+  .otpModal .planDesc .footerSec li h5 {
+    font: 600 14px "Muli", sans-serif;
+  }
+  .otpModal .planDesc .footerSec li span {
+    font: 600 15px "Muli", sans-serif;
+  }
+  .otpModal .planDesc ul li .checkDiv table tr td ul li {
+    padding-left: 10px;
+    font: 400 11px/15px "Muli", sans-serif;
+  }
+  .otpModal .planDesc ul li .checkDiv table tr td label {
+    font: 600 15px "Muli", sans-serif;
+  }
+  .otpModal .planDesc ul li .checkDiv table tr td .buildTxt {
+    font: 500 11px "Muli", sans-serif;
+  }
+  .otpModal .planDesc ul li .checkDiv table tr td .ratingTxt {
+    font: 500 11px "Muli", sans-serif;
+  }
+  .otpModal .planDesc ul li.inSum h5 {
+    font: 600 13px "Muli", sans-serif;
+  }
+  .otpModal .planDesc ul li.inSum span {
+    font: 700 14px "Muli", sans-serif;
+  }
+  .otpModal .planDesc .btnPro {
+    margin: 20px 0 10px 0px !important;
+  }
+  .padding0Header {
+    padding-top: 0;
+  }
+  .radioDiv ul li {
+    margin: 5px 8px 5px 0;
+  }
+  .btnPro {
+    margin: 0 0 20px 0px;
+  }
+  .custom-file .custom-file-label {
+    top: 5px;
+    font: 400 12px "Muli", sans-serif;
+  }
+  .labelBlock {
+    display: block !important;
+  }
+  header .openform img {
+    margin: 6px 0;
+  }
+  .tabsec h1 {
+    font: 300 30px "Muli", sans-serif;
+    text-align: left;
+    margin-bottom: 40px;
+  }
+  .tabsec ul.nav-tabs li a {
+    padding: 10px;
+    font: 600 15px "Muli", sans-serif;
+  }
+  .tabsec .tab-content {
+    padding: 20px 0;
+  }
+  .tabsec .tab-content ul li {
+    font: 300 14px "Muli", sans-serif;
+  }
+  .tabsec .card .card-header a {
+    padding: 15px 20px;
+    font: 400 15px "Muli", sans-serif;
+  }
+  .tabsec .card .card-body {
+    padding: 15px 20px;
+  }
+  .tabsec .card .card-body span {
+    font: 300 15px "Muli", sans-serif;
+  }
+  .tabsec .card .card-body strong {
+    font: 500 15px "Muli", sans-serif;
+  }
+  .tabsec .card .card-body p {
+    font: 300 15px "Muli", sans-serif;
+  }
+  .tabsec .card .card-body p small {
+    font: 500 15px "Muli", sans-serif;
+  }
+  .tabsec .card .card-body h4 {
+    font: 500 15px "Muli", sans-serif;
+  }
+  .tabsec .card .card-body h3 {
+    font: 700 15px "Muli", sans-serif;
+  }
+  .hiddenOnExist .input-field label {
+    font: 300 13px "Muli", sans-serif;
+  }
+  .input-field .bigInput {
+    margin-top: 30px;
+  }
+  .input-field.focused label {
+    top: -5px;
+  }
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {
+    padding-top: 15px;
+  }
+  .sidenav a {
+    font: 300 18px "Muli", sans-serif;
+  }
+}
+/*# sourceMappingURL=style.css.map */
+
+
+.mobMenuWrapper ul.navBar li ul.riskmanage-submenu {left: -26% !important;}
+
+.mobMenuWrapper ul.navBar li ul.claim-innermenu {left: -100% !important;}
+
+
+li.risk-manage.active a::after {left: 20% !important;}
+
+
+
+/*.mobMenuWrapper ul.navBar li.active a::after*/
+
+.mobMenuWrapper ul.navBar li:hover:after {
+  content: '';
+  width: 100%;
+  height: 0;
+  border: 3px solid #ec6625;
+  margin: 0 auto;
+  position: absolute;
+  top: 65px;
+  z-index: 99999;
+  left: 0 !important;
+  right: 400;
+
+  background: #ec6625;
+}
+
+.mobMenuWrapper ul.navBar li ul li:hover:after { border: none;}

@@ -1,0 +1,40 @@
+/* Shimmer skeletons shared across app */
+
+@keyframes shimmer {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(100%); }
+}
+
+.skeleton {
+  position: relative;
+  overflow: hidden;
+  background-color: #e9ecef; /* light gray */
+  border-radius: 6px;
+}
+.skeleton::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  transform: translateX(-100%);
+  background: linear-gradient(90deg, rgba(255,255,255,0), rgba(255,255,255,.6), rgba(255,255,255,0));
+  animation: shimmer 1.2s infinite;
+}
+
+/* Navbar skeleton sizes */
+.sk-logo { width: 120px; height: 36px; border-radius: 8px; }
+.sk-pill { width: 80px; height: 14px; border-radius: 999px; }
+.sk-btn  { width: 96px; height: 36px; border-radius: 8px; }
+
+/* Page skeleton sizes */
+.sk-heading { height: 32px; max-width: 720px; }
+.sk-subheading { height: 18px; max-width: 540px; }
+.sk-line { height: 12px; }
+.sk-card { height: 140px; border-radius: 10px; }
+
+/* Footer skeleton sizes */
+.sk-footer-line { height: 12px; }
+
+/* Utility: spacing for skeleton items */
+.sk-gap-1 > * { margin-right: .5rem; }
+.sk-gap-2 > * { margin-right: 1rem; }
+

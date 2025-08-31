@@ -1,0 +1,80 @@
+# =========================
+# Node / ReactJS (Parcel + Vite)
+# =========================
+node_modules/
+dist/
+.parcel-cache/
+.cache/
+*.local
+
+# Vite specific
+vite.config.ts.timestamp-*
+vite.config.js.timestamp-*
+*.tsbuildinfo
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+*.log
+
+# Editor configs
+.vscode/
+.idea/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+*.userprefs
+
+# =========================
+# .NET Core / Visual Studio
+# =========================
+bin/
+obj/
+*.exe
+*.dll
+*.pdb
+*.cache
+*.dbmdl
+*.bak
+*.tmp
+*.tlog
+
+# Visual Studio working folder
+.vs/
+
+# NuGet
+*.nupkg
+.nuget/
+packages/
+project.lock.json
+project.fragment.lock.json
+
+# ASP.NET temporary files
+**/App_Data/
+
+# Test results
+TestResults/
+*.trx
+*.coverage
+*.coveragexml
+
+# Publish output
+publish/
+
+# =========================
+# Rider / ReSharper / DotCover
+# =========================
+_ReSharper*/
+*.[Rr]e[Ss]harper
+*.dotCover
+*.sln.iml
+
+# =========================
+# Others
+# =========================
+.DS_Store
+Thumbs.db
+.localhistory/
